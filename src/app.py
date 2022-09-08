@@ -75,7 +75,7 @@ search_expression = 'json' if len(argv) == 1 else argv[1]
 nb_repositories = 200 if len(argv) <= 2 else int(argv[2])
 
 # Get all repositories information
-print("Get repositories information...")
+print("Getting repositories information...")
 full_repositories = get_repositories(search_expression, nb_repositories)
 
 for full_repo in full_repositories:
@@ -96,7 +96,7 @@ for full_repo in full_repositories:
     })
 
 # Export the result in a json file
-print("Export repositories information...")
+print("Exporting repositories information...")
 with open('build/repositories.json', 'w') as output_file:    
     dump({
             'search_expression': search_expression,
